@@ -154,9 +154,9 @@
 //
 //   See above for BOOST_NO_LONG_LONG
 
-// C++ features supported by VC++ 10 (aka 2010)
+// C++ features supported by VC++ 11 (aka 2012)
 //
-#if _MSC_VER < 1600
+#if _MSC_VER < 1700
 #define BOOST_NO_AUTO_DECLARATIONS
 #define BOOST_NO_AUTO_MULTIDECLARATIONS
 #define BOOST_NO_DECLTYPE
@@ -211,6 +211,8 @@
 #     define BOOST_COMPILER_VERSION evc9
 #   elif _MSC_VER == 1600
 #     define BOOST_COMPILER_VERSION evc10
+#   elif _MSC_VER == 1700
+#     define BOOST_COMPILER_VERSION evc11
 #   else
 #      if defined(BOOST_ASSERT_CONFIG)
 #         error "Unknown EVC++ compiler version - please run the configure tests and report the results"
@@ -234,6 +236,8 @@
 #     define BOOST_COMPILER_VERSION 9.0
 #   elif _MSC_VER == 1600
 #     define BOOST_COMPILER_VERSION 10.0
+#   elif _MSC_VER == 1700
+#     define BOOST_COMPILER_VERSION 11.0
 #   else
 #     define BOOST_COMPILER_VERSION _MSC_VER
 #   endif
@@ -248,8 +252,8 @@
 #error "Compiler not supported or configured - please reconfigure"
 #endif
 //
-// last known and checked version is 1600 (VC10, aka 2010):
-#if (_MSC_VER > 1600)
+// last known and checked version is 1700 (VC11, aka 2012):
+#if (_MSC_VER > 1700)
 #  if defined(BOOST_ASSERT_CONFIG)
 #     error "Unknown compiler version - please run the configure tests and report the results"
 #  else
