@@ -1,0 +1,10 @@
+# ignore everything except files listed below
+*
+
+# list of files to track
+#  source files related to build tools and .gitignore
+!/.gitignore
+!/boost/config/auto_link.hpp
+!/boost/config/compiler/visualc.hpp
+!/tools/jam/src/build.bat
+!/tools/jam/src/build.jam
